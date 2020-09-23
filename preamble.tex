@@ -1,0 +1,70 @@
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor = black,
+%     filecolor=magenta,
+    urlcolor=black,
+%     pdftitle={<Name>},
+%     bookmarks=true
+%     pdfpagemode=FullScreen,
+}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathtools}
+
+\usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage[maxbibnames=9]{biblatex}
+\addbibresource{references.bib}
+
+
+\usepackage{float}
+\usepackage[center]{caption}
+\usepackage{subcaption}
+\usepackage{import}
+\usepackage{transparent}
+\usepackage{csquotes}
+
+\usepackage{bm}
+\usepackage{listings}
+    \lstset{
+    language=Matlab, % Language
+    numbers=left, % where to put the line-numbers
+    numberstyle=\footnotesize,% the size of the fonts that are used for the line-numbers
+    stepnumber=1,% the step between two line-numbers. If it's 1 each line will be numbered
+    numbersep=5pt,% how far the line-numbers are from the code
+    showspaces=false,% show spaces adding particular underscores
+    showstringspaces=false,% underline spaces within strings
+    showtabs=false,% show tabs within strings adding particular underscores
+    breaklines=true,% sets automatic line breaking
+    breakatwhitespace=false,% sets if automatic breaks should only happen at whitespace
+    escapeinside={\%*}{*)}% if you want to add a comment within your code
+    }
+
+\newcommand*{\Perm}[2]{{}^{#1}\!P_{#2}}%
+\newcommand*{\Comb}[2]{{}^{#1}C_{#2}}%
+
+\usepackage{mathtools}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+% Swap the definition of \abs* and \norm*, so that \abs
+% and \norm resizes the size of the brackets, and the
+% starred version does not.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \rhead{}
+% \lhead{}
+% \fancyfoot[R]{\thepage}
